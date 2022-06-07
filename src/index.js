@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const [books, setBooks] = React.useState([
+//     { author: 'Джоан Роулинг', name: 'Гарри Поттер и узник Азкабана' },
+//     { author: 'Михаил Булгаков', name: 'Мастер и Маргарита' },
+//     { author: 'Дэн Браун', name: 'Код да Винчи' },
+//     { author: 'Стивен Кинг', name: 'Зелёная миля' },
+//     { author: 'Шарлотта Бронте', name: 'Джейн Эйр' },
+//     { author: 'Маргарет Митчелл', name: 'Унесенные ветром' },
+//     { author: 'Лев Толстой', name: 'Война и мир' },
+//     { author: 'Джоан Роулинг', name: 'Гарри Поттер и философский камень' },
+// ]);
