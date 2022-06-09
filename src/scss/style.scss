@@ -10,7 +10,7 @@ body {
 
 .App {
     background-color: rgb(237, 228, 214);
-    height: 100%;
+    min-height: 100%;
     position: relative;
 }
 
@@ -126,6 +126,9 @@ body {
     &.active {
         opacity: 1;
         visibility: visible;
+        #root {
+            overflow: hidden;
+        }
     }
 
     &__body {

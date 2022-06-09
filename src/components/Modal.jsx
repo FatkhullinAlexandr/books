@@ -7,13 +7,19 @@ const Modal = ({ open, setOpen, addNewBook, modal, value, setValue, edit }) => {
         if ((value.author, value.name)) {
             addNewBook(value.author, value.name);
             setValue({ author: '', name: '' });
+            setMessage(false);
         } else {
             setMessage(true);
         }
     };
 
+    const closeModal = () => {
+        setOpen(false);
+        setMessage(false);
+    };
+
     return (
-        <div className={open ? 'modal active' : 'modal'} onClick={() => setOpen(false)}>
+        <div className={open ? 'modal active' : 'modal'} onClick={() => closeModal()}>
             <div className="modal__body" onClick={(e) => e.stopPropagation()}>
                 {message ? <p>Заполните все поля</p> : ''}
                 <label htmlFor="author">Автор:</label>
